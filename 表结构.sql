@@ -8,9 +8,9 @@ CREATE TABLE `bl_user` (
   `user_email` varchar(32)  NOT NULL COMMENT '用户邮箱',
   `user_profile_url` varchar(128)  NOT NULL COMMENT '用户头像',
   `user_description` varchar(64) NULL DEFAULT NULL COMMENT '用户简介',
-  `user_birthday` date NULL DEFAULT NULL COMMENT '用户生日',
+  `user_birthday` datetime NULL DEFAULT NULL COMMENT '用户生日',
   `user_age` tinyint(4) NULL DEFAULT NULL COMMENT '用户年龄',
-  `user_telephone_number` int(11) NOT NULL COMMENT '用户手机号',
+  `user_telephone_number` varchar(11) NOT NULL COMMENT '用户手机号',
   `user_registration_time` datetime NULL DEFAULT NULL COMMENT '注册时间',
   `is_deleted` varchar(1)  NOT NULL COMMENT '是否删除（0未删除，1已删除）',
   `created_by_id` varchar(36)  NOT NULL COMMENT '创建人',
@@ -25,7 +25,7 @@ CREATE TABLE `bl_friend_link` (
   `id` varchar(32) NOT NULL COMMENT '主键ID',
   `user_id` varchar(20)  NOT NULL COMMENT '用户ID',
   `friend_link` varchar(20)  NOT NULL COMMENT '朋友链接',
-  `friend_avatar_url` varchar(15)  DEFAULT NULL COMMENT '朋友头像地址',
+  `friend_avatar_url` varchar(64)  DEFAULT NULL COMMENT '朋友头像地址',
   `is_deleted` varchar(1)  NOT NULL COMMENT '是否删除（0未删除，1已删除）',
   `created_by_id` varchar(36)  NOT NULL COMMENT '创建人',
   `created_time` datetime NOT NULL COMMENT '创建日期',
@@ -51,7 +51,7 @@ CREATE TABLE `bl_admin` (
 ) COMMENT='管理员表'
 
 # 文章管理
-CREATE TABLE `bl_admin` (
+CREATE TABLE `bl_article` (
   `id` varchar(32) NOT NULL COMMENT '主键ID',
   `admin_id` bigint(20) NOT NULL COMMENT '发表用户ID',
   `article_title` varchar(64) NOT NULL COMMENT '博文标题',
@@ -79,25 +79,11 @@ CREATE TABLE `bl_tag` (
   PRIMARY KEY (`id`)
 ) COMMENT='标签表'
 
-# 标签
-CREATE TABLE `bl_tag` (
-  `id` varchar(32) NOT NULL COMMENT '主键ID',
-  `tag_name` varchar(16) NOT NULL COMMENT '标签名',
-  `link_article_count` int NOT NULL COMMENT '关联的文章数量',
-  `article_content` longtext  NOT NULL COMMENT '博文内容',
-  `is_deleted` varchar(1)  NOT NULL COMMENT '是否删除（0未删除，1已删除）',
-  `created_by_id` varchar(36)  NOT NULL COMMENT '创建人',
-  `created_time` datetime NOT NULL COMMENT '创建时间',
-  `lastmodified_by_id` varchar(36)  NOT NULL COMMENT '最后更新人',
-  `lastmodified_time` datetime NOT NULL COMMENT '最后更新日期',
-  PRIMARY KEY (`id`)
-) COMMENT='标签表'
-
 # 文章与标签表的关系表
 CREATE TABLE `bl_tag_links` (
   `id` varchar(32) NOT NULL COMMENT '主键ID',
-  `tag_id` varchar(16) NOT NULL COMMENT '标签名',
-  `article_id` int NOT NULL COMMENT '关联的文章数量',
+  `tag_id` varchar(32) NOT NULL COMMENT '标签ID',
+  `article_id` varchar(32) NOT NULL COMMENT '文章ID',
   `is_deleted` varchar(1)  NOT NULL COMMENT '是否删除（0未删除，1已删除）',
   `created_by_id` varchar(36)  NOT NULL COMMENT '创建人',
   `created_time` datetime NOT NULL COMMENT '创建时间',
