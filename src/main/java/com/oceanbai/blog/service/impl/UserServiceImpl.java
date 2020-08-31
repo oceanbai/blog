@@ -1,26 +1,20 @@
 package com.oceanbai.blog.service.impl;
 
-import com.oceanbai.blog.mapper.dao.UserMapper;
-import com.oceanbai.blog.mapper.entity.User;
-import com.oceanbai.blog.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.oceanbai.blog.entity.User;
+import com.oceanbai.blog.mapper.UserMapper;
+import com.oceanbai.blog.service.IUserService;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**
- * 用户信息业务实现类
+ * <p>
+ * 用户表 服务实现类
+ * </p>
  *
- * @author longzhang.wang
- * @Date 2019年11月5日
+ * @author ocean.bai
+ * @since 2020-08-31
  */
-@Service()
-public class UserServiceImpl implements UserService {
+@Service
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
 
-    @Autowired
-    private UserMapper userMapper;
-
-    @Override
-    public User getUserInfoById(Long id) throws Exception {
-
-        return null;
-    }
 }
