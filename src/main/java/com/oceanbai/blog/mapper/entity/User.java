@@ -14,7 +14,7 @@ import java.util.Date;
  */
 @Data
 @TableName("bl_user")
-public class UserInfo implements Serializable {
+public class User implements Serializable {
 
     /**
      * id
