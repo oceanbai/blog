@@ -12,3 +12,4 @@ application.pid
 fileTemp
 /log/error.log
 /.idea/
+logs/
