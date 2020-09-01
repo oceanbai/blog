@@ -1,16 +1,17 @@
 package com.oceanbai.blog.dao;
 
-import io.swagger.annotations.ApiModelProperty;
+import com.oceanbai.blog.constant.CommonConstant;
+import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 /**
  * @author bby15929
  * @date 2020年09月01日14:07:24
  */
+@Data
 public class BaseEntry {
     @Id
     @Column(name = "id")
@@ -45,4 +46,16 @@ public class BaseEntry {
      */
     @Column(name = "lastmodified_time")
     private LocalDateTime lastmodifiedTime;
+
+    public BaseEntry(){
+    }
+
+    public BaseEntry(long id){
+        this.id = id;
+        this.isDeleted = CommonConstant.DELETE_TAG_NO;
+        this.createdById = CommonConstant.CREATE_ID;
+        this.createdTime = LocalDateTime.now();
+        this.lastmodifiedById = CommonConstant.UPDATE_ID;
+        this.lastmodifiedTime = LocalDateTime.now();
+    }
 }
