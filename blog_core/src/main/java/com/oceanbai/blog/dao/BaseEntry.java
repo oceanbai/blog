@@ -1,6 +1,6 @@
 package com.oceanbai.blog.dao;
 
-import com.oceanbai.blog.constant.CommonConstant;
+import com.oceanbai.common.blog.constant.CommonConstant;
 import lombok.Data;
 
 import javax.persistence.Column;

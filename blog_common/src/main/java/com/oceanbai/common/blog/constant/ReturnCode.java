@@ -1,7 +1,7 @@
-package com.oceanbai.blog.constant;
+package com.oceanbai.common.blog.constant;
 
 import com.google.common.collect.ImmutableMap;
-import com.oceanbai.blog.model.response.Response;
+import com.oceanbai.common.blog.model.response.Response;
 
 /**
  * @author bby15929

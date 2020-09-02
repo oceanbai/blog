@@ -1,4 +1,4 @@
-package com.oceanbai.blog.model.response;
+package com.oceanbai.common.blog.model.response;
 
 import java.io.Serializable;
 

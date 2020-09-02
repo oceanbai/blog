@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.retry.annotation.EnableRetry;
 
 @MapperScan("com.oceanbai.blog.dao.mapper")
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.oceanbai.common.blog"})
 public class BlogApplication {
 
     public static void main(String[] args) {

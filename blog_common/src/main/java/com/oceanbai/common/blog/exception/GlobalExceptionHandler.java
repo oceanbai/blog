@@ -1,7 +1,7 @@
-package com.oceanbai.blog.exception;
+package com.oceanbai.common.blog.exception;
 
-import com.oceanbai.blog.constant.ReturnCode;
-import com.oceanbai.blog.model.response.BlogApiResponse;
+import com.oceanbai.common.blog.constant.ReturnCode;
+import com.oceanbai.common.blog.model.response.BlogApiResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

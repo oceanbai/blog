@@ -1,4 +1,4 @@
-package com.oceanbai.blog.constant;
+package com.oceanbai.common.blog.constant;
 
 /**
  * @author bby15929

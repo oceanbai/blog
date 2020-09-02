@@ -2,7 +2,7 @@ package com.oceanbai.blog.controller.back;
 
 
 import com.oceanbai.blog.model.dto.ArticleDTO;
-import com.oceanbai.blog.model.response.BlogApiResponse;
+import com.oceanbai.common.blog.model.response.BlogApiResponse;
 import com.oceanbai.blog.service.IArticleService;
 import com.oceanbai.blog.service.impl.ArticleServiceImpl;
 import io.swagger.annotations.ApiOperation;

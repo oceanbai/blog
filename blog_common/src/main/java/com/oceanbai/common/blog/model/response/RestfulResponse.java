@@ -1,4 +1,4 @@
-package com.oceanbai.blog.model.response;
+package com.oceanbai.common.blog.model.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

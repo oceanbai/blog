@@ -1,9 +1,9 @@
-package com.oceanbai.blog.model.response;
+package com.oceanbai.common.blog.model.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.oceanbai.blog.constant.ReturnCode;
+import com.oceanbai.common.blog.constant.ReturnCode;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
