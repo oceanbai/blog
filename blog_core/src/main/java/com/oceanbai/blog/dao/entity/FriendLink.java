@@ -32,5 +32,10 @@ public class FriendLink extends BaseEntry {
     @ApiModelProperty(value = "朋友头像地址")
     private String friendAvatarUrl;
 
+    /**
+     * 是否展示(0展示 1不展示)
+     */
+    private String isShow;
+
 
 }

@@ -29,5 +29,8 @@ public class Tag extends BaseEntry {
     @ApiModelProperty(value = "关联的文章数量")
     private Integer linkArticleCount;
 
+    @ApiModelProperty(value = "排序序号")
+    private Integer sortNumber;
+
 
 }

@@ -22,19 +22,39 @@ public class Article extends BaseEntry {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "发表用户ID")
+    /**
+     * 发表用户ID
+     */
     private Long adminId;
 
-    @ApiModelProperty(value = "博文标题")
+    /**
+     * 博文标题
+     */
     private String articleTitle;
 
-    @ApiModelProperty(value = "博文内容")
+    /**
+     * 博文内容
+     */
     private String articleContent;
+
+    /**
+     * 浏览量
+     */
+    private String articleViews;
+
+    /**
+     * 评论总数
+     */
+    private String articleCommentCount;
+
+    /**
+     * 是否展示(0展示 1不展示)
+     */
+    private String isShow;
 
     public Article(){
     }
     public Article(long id){
         super(id);
     }
-
 }

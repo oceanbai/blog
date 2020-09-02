@@ -32,5 +32,8 @@ public class Sort extends BaseEntry {
     @ApiModelProperty(value = "父分类ID")
     private Long parentSortId;
 
+    @ApiModelProperty(value = "排序序号")
+    private Integer sortNumber;
+
 
 }

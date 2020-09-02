@@ -27,8 +27,8 @@ public class User extends BaseEntry {
     @ApiModelProperty(value = "用户IP")
     private String userIp;
 
-    @ApiModelProperty(value = "用户名")
-    private String userName;
+    @ApiModelProperty(value = "用户名备注")
+    private String userNameRemark;
 
     @ApiModelProperty(value = "用户密码")
     private String userPassword;
