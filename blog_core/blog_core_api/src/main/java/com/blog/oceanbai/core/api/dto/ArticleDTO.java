@@ -1,4 +1,4 @@
-package com.blog.oceanbai.core.model.dto;
+package com.blog.oceanbai.core.api.dto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

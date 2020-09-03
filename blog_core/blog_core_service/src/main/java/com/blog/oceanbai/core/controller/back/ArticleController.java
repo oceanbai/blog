@@ -1,7 +1,8 @@
 package com.blog.oceanbai.core.controller.back;
 
 
-import com.blog.oceanbai.core.model.dto.ArticleDTO;
+import com.blog.oceanbai.core.api.dto.ArticleDTO;
+import com.blog.oceanbai.core.api.model.ArticleCondition;
 import com.blog.oceanbai.core.service.IArticleService;
 import com.blog.oceanbai.common.model.response.BlogApiResponse;
 import io.swagger.annotations.ApiOperation;
@@ -45,7 +46,7 @@ public class ArticleController {
 
     @ApiOperation("获取文章列表")
     @RequestMapping(value = "/list", method = RequestMethod.POST)
-    public BlogApiResponse<Void> getArticleList(ArticleDTO articleDTO) {
+    public BlogApiResponse<Void> getArticleList(ArticleCondition articleCondition) {
         return new BlogApiResponse<>();
     }
 

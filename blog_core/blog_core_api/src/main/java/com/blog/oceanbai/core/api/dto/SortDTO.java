@@ -1,27 +1,19 @@
-package com.blog.oceanbai.core.dao.entity;
+package com.blog.oceanbai.core.api.dto;
 
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.blog.oceanbai.core.dao.BaseEntry;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 /**
- * <p>
- * 分类表
- * </p>
- *
  * @author ocean.bai
- * @since 2020-08-31
+ * @date 2020年09月03日 10:29 下午
  */
 @Data
-@EqualsAndHashCode(callSuper = true)
-@TableName("blog_sort")
 @ApiModel(value="Sort对象", description="分类表")
-public class Sort extends BaseEntry {
+public class SortDTO {
 
-    private static final long serialVersionUID = 1L;
+    @ApiModelProperty(value = "分类主键")
+    private String sortId;
 
     @ApiModelProperty(value = "分类名称")
     private String sortName;
@@ -34,10 +26,4 @@ public class Sort extends BaseEntry {
 
     @ApiModelProperty(value = "排序序号")
     private Integer sortNumber;
-
-    public Sort(){
-    }
-    public Sort(long id){
-        super(id);
-    }
 }

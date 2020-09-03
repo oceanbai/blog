@@ -2,7 +2,7 @@ package com.blog.oceanbai.core.service;
 
 import com.blog.oceanbai.core.dao.entity.Article;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.blog.oceanbai.core.model.dto.ArticleDTO;
+import com.blog.oceanbai.core.api.dto.ArticleDTO;
 
 import java.util.List;
 

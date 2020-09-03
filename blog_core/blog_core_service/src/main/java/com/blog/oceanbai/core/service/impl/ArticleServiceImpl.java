@@ -2,7 +2,7 @@ package com.blog.oceanbai.core.service.impl;
 
 import com.blog.oceanbai.core.dao.entity.Article;
 import com.blog.oceanbai.core.dao.mapper.ArticleMapper;
-import com.blog.oceanbai.core.model.dto.ArticleDTO;
+import com.blog.oceanbai.core.api.dto.ArticleDTO;
 import com.blog.oceanbai.core.service.IArticleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.blog.oceanbai.core.utils.SnowFlakeIdUtil;
