@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @MapperScan("com.oceanbai.blog.dao.mapper")
-@SpringBootApplication(scanBasePackages = {"com.oceanbai.common.blog"})
+@SpringBootApplication(scanBasePackages = {"com.blog.oceanbai.common"})
 public class BlogApplication {
 
     public static void main(String[] args) {
