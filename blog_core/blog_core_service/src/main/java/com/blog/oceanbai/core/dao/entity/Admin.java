@@ -38,5 +38,9 @@ public class Admin extends BaseEntry {
     @ApiModelProperty(value = "简言")
     private String simpleTalk;
 
-
+    public Admin(){
+    }
+    public Admin(long id){
+        super(id);
+    }
 }

@@ -29,5 +29,9 @@ public class TagLinks extends BaseEntry {
     @ApiModelProperty(value = "文章ID")
     private Long articleId;
 
-
+    public TagLinks(){
+    }
+    public TagLinks(long id){
+        super(id);
+    }
 }

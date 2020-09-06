@@ -57,5 +57,9 @@ public class User extends BaseEntry {
     @ApiModelProperty(value = "注册时间")
     private LocalDateTime userRegistrationTime;
 
-
+    public User(){
+    }
+    public User(long id){
+        super(id);
+    }
 }

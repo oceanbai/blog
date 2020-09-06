@@ -1,15 +1,17 @@
 package com.blog.oceanbai.core.api.model;
 
+import com.blog.oceanbai.core.api.model.page.BasePager;
 import lombok.Data;
-
-import java.io.Serializable;
+import lombok.EqualsAndHashCode;
 
 /**
  * @author ocean.bai
  * @date 2020年09月03日 10:23 下午
  */
+
 @Data
-public class ArticleCondition implements Serializable {
+@EqualsAndHashCode(callSuper = true)
+public class ArticleCondition extends BasePager {
 
     /**
      * 分类

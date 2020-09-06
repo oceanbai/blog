@@ -1,7 +1,12 @@
 package com.blog.oceanbai.core.dao.mapper;
 
+import com.blog.oceanbai.core.api.model.TagCondition;
+import com.blog.oceanbai.core.api.vo.TagVO;
 import com.blog.oceanbai.core.dao.entity.Tag;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +18,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface TagMapper extends BaseMapper<Tag> {
 
+    List<TagVO> getTagList(@Param("condition") TagCondition tagCondition);
 }

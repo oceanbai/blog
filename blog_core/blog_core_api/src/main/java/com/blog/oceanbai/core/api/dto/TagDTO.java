@@ -1,11 +1,12 @@
-package com.blog.oceanbai.core.dao.entity;
+package com.blog.oceanbai.core.api.dto;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.blog.oceanbai.core.dao.BaseEntry;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
 
 /**
  * <p>
@@ -16,10 +17,8 @@ import lombok.EqualsAndHashCode;
  * @since 2020-08-31
  */
 @Data
-@EqualsAndHashCode(callSuper = true)
-@TableName("blog_tag")
-@ApiModel(value="Tag对象", description="标签表")
-public class Tag extends BaseEntry {
+@ApiModel(value="TagDTO对象", description="标签")
+public class TagDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -32,9 +31,5 @@ public class Tag extends BaseEntry {
     @ApiModelProperty(value = "排序序号")
     private Integer sortNumber;
 
-    public Tag(){
-    }
-    public Tag(long id){
-        super(id);
-    }
+
 }

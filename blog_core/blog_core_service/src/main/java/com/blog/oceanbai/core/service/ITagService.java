@@ -1,7 +1,14 @@
 package com.blog.oceanbai.core.service;
 
-import com.blog.oceanbai.core.dao.entity.Tag;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.blog.oceanbai.common.model.response.BlogApiResponse;
+import com.blog.oceanbai.core.api.dto.TagDTO;
+import com.blog.oceanbai.core.api.model.TagCondition;
+import com.blog.oceanbai.core.api.vo.TagVO;
+import com.blog.oceanbai.core.dao.entity.Tag;
+import com.github.pagehelper.Page;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +20,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface ITagService extends IService<Tag> {
 
+    TagDTO addTag(TagDTO tagDTO);
+
+    BlogApiResponse<Boolean> deleteTag(String tagId);
+
+    TagDTO updateTag(TagDTO tagDTO);
+
+    Page<List<TagVO>> getTagList(TagCondition tagCondition);
 }

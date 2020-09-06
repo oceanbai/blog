@@ -37,5 +37,11 @@ public class FriendLink extends BaseEntry {
      */
     private String isShow;
 
+    public FriendLink(){
+    }
+    public FriendLink(long id){
+        super(id);
+    }
+
 
 }

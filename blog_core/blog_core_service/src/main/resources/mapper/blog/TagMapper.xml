@@ -2,4 +2,21 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.blog.oceanbai.core.dao.mapper.TagMapper">
 
+    <resultMap id="listResultMap" type="com.blog.oceanbai.core.api.vo.TagVO">
+        <!-- 定义主键 ,非常重要。如果是多个字段,则定义多个id -->
+        <result property="id" column="id"/>
+        <!-- 定义普通属性 -->
+        <result property="tagName" column="tag_name"/>
+        <result property="linkArticleCount" column="link_article_count"/>
+        <result property="sortNumber" column="sort_number"/>
+    </resultMap>
+
+    <select id="getTagList" resultMap="listResultMap">
+        SELECT t.id,t.tag_name,t.link_article_count,t.sort_number FROM blog_tag t
+        <where>
+            <if test="condition.tagName != null">
+                t.tag_name like CONCAT('%','${condition.tagName}','%' )
+            </if>
+        </where>
+    </select>
 </mapper>
