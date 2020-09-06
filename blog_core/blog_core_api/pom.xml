@@ -8,7 +8,6 @@
         <version>0.0.1</version>
         <relativePath/>
     </parent>
-    <groupId>com.oceanbai.blog.core.api</groupId>
     <artifactId>blog_core_api</artifactId>
     <version>0.0.1</version>
     <name>blog_core_api</name>
