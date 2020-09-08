@@ -56,9 +56,9 @@ public class TagServiceImpl extends ServiceImpl<TagMapper, Tag> implements ITagS
     }
 
     @Override
-    public Page<List<TagVO>> getTagList(TagCondition tagCondition) {
-       Page<List<TagVO>> listPage = PageHelper.startPage(tagCondition.getPage(),tagCondition.getPageSize());
-        List<TagVO> list =  baseMapper.getTagList(tagCondition);
+    public Page<TagVO> getTagList(TagCondition tagCondition) {
+        PageHelper.startPage(tagCondition.getPage(),tagCondition.getPageSize());
+        Page<TagVO> listPage =  baseMapper.getTagList(tagCondition);
         return listPage;
     }
 }

@@ -26,5 +26,5 @@ public interface ITagService extends IService<Tag> {
 
     TagDTO updateTag(TagDTO tagDTO);
 
-    Page<List<TagVO>> getTagList(TagCondition tagCondition);
+    Page<TagVO> getTagList(TagCondition tagCondition);
 }
