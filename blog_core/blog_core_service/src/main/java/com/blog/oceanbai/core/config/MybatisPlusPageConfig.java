@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.Resource;
+import java.util.Properties;
 
 /**
  * 两个分页插件都配置,不会冲突
@@ -17,12 +18,20 @@ public class MybatisPlusPageConfig {
 
     @Resource
     private PageHelperConfig pageHelperConfig;
+
     /**
      * pagehelper的分页插件
      */
     @Bean
     public PageInterceptor pageInterceptor() {
-        return new PageInterceptor();
+        PageInterceptor interceptor = new PageInterceptor();
+        Properties properties = new Properties();
+        properties.setProperty("helperDialect", pageHelperConfig.getHelperDialect());
+        properties.setProperty("params", pageHelperConfig.getParams());
+        properties.setProperty("supportMethodsArguments", pageHelperConfig.getSupportMethodsArguments());
+        properties.setProperty("reasonable", pageHelperConfig.getReasonable());
+        interceptor.setProperties(properties);
+        return interceptor;
     }
 
 }
