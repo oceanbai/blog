@@ -10,11 +10,13 @@ import com.blog.oceanbai.core.api.vo.TagVO;
 import com.blog.oceanbai.core.service.ITagService;
 import com.github.pagehelper.Page;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.annotations.ApiIgnore;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -27,6 +29,7 @@ import java.util.List;
  * @author ocean.bai
  * @since 2020-08-31
  */
+@Slf4j
 @RestController
 @RequestMapping("/blog/tag")
 public class TagController {
@@ -55,7 +58,7 @@ public class TagController {
 
     @ApiOperation("获取标签列表")
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public BlogApiResponse<Page<TagVO>> getTagList(@RequestBody TagCondition tagCondition) {
+    public BlogApiResponse<Page<TagVO>> getTagList(@ApiIgnore TagCondition tagCondition) {
         Page<TagVO> page = iTagService.getTagList(tagCondition);
         return BlogApiResponse.ok(page);
     }
