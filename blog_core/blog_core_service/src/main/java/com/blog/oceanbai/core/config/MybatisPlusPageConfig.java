@@ -4,6 +4,8 @@ import com.github.pagehelper.PageInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import javax.annotation.Resource;
+
 /**
  * 两个分页插件都配置,不会冲突
  *
@@ -13,6 +15,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MybatisPlusPageConfig {
 
+    @Resource
+    private PageHelperConfig pageHelperConfig;
     /**
      * pagehelper的分页插件
      */
