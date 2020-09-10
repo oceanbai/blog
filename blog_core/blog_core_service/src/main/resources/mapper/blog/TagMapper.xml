@@ -14,8 +14,8 @@
     <select id="getTagList" resultMap="listResultMap">
         SELECT t.id,t.tag_name,t.link_article_count,t.sort_number FROM blog_tag t
         <where>
-            <if test="condition.tagName != null">
-                t.tag_name like CONCAT('%','${condition.tagName}','%' )
+            <if test="tagName != null">
+                t.tag_name like CONCAT('%','${tagName}','%' )
             </if>
         </where>
     </select>

@@ -19,5 +19,5 @@ import java.util.List;
  */
 public interface TagMapper extends BaseMapper<Tag> {
 
-    Page<TagVO> getTagList(@Param("condition") TagCondition tagCondition);
+    Page<TagVO> getTagList(TagCondition tagCondition);
 }
