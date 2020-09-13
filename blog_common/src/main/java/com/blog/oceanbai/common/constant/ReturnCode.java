@@ -11,7 +11,7 @@ public enum ReturnCode implements Response {
     /**
      * 接口结果响应码
      */
-    SUCCESS("0","请求成功"),
+    SUCCESS("1","请求成功"),
     FAILURE("-1","系统繁忙，请稍候重试");
 
     private final String code;

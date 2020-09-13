@@ -5,6 +5,7 @@ import com.blog.oceanbai.core.api.dto.ArticleDTO;
 import com.blog.oceanbai.core.api.model.ArticleCondition;
 import com.blog.oceanbai.core.service.IArticleService;
 import com.blog.oceanbai.common.model.response.BlogApiResponse;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +20,7 @@ import javax.annotation.Resource;
  * @since 2020-08-31
  */
 @RestController
+@Api(tags = "文章管理接口")
 @RequestMapping("/blog/article")
 public class ArticleController {
 

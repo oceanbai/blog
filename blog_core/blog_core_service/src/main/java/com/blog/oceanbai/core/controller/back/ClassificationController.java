@@ -6,6 +6,7 @@ import com.blog.oceanbai.core.api.dto.ArticleDTO;
 import com.blog.oceanbai.core.api.dto.ClassificationDTO;
 import com.blog.oceanbai.core.api.vo.SortVO;
 import com.blog.oceanbai.core.service.IClassificationService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +26,7 @@ import java.util.List;
  * @since 2020-08-31
  */
 @RestController
+@Api(tags = "分类管理接口")
 @RequestMapping("/blog/classification")
 public class ClassificationController {
 

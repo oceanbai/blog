@@ -13,4 +13,6 @@ public class CommonConstant {
     public static final String CREATE_ID = "SYS";
 
     public static final String UPDATE_ID = "SYS";
+
+    public static final Long CLASSIFICATION_ROOT_ID = 0L;
 }

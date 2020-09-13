@@ -69,7 +69,15 @@
             <version>1.1.23</version>
         </dependency>
 
-<!--        <dependency>-->
+        <!-- 上面两个jar的必须的，下面这个是第三方的UI界面的美化，不是必需的 -->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>swagger-bootstrap-ui</artifactId>
+            <version>1.9.6</version>
+        </dependency>
+
+
+        <!--        <dependency>-->
 <!--            <groupId>com.baomidou</groupId>-->
 <!--            <artifactId>mybatis-plus-generator</artifactId>-->
 <!--            <version>3.4.0</version>-->

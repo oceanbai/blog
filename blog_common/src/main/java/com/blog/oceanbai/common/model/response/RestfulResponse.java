@@ -1,5 +1,6 @@
 package com.blog.oceanbai.common.model.response;
 
+import com.blog.oceanbai.common.constant.ReturnCode;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModelProperty;
@@ -22,8 +23,8 @@ public class RestfulResponse implements Response{
      * 返回状态码
      */
     @JsonProperty("code")
-    @ApiModelProperty(value = "返回状态码", example = "666666", required = true)
-    private String code = GlobalResponseEnum.SUCCESS.getCode();
+    @ApiModelProperty(value = "返回状态码", example = "1", required = true)
+    private String code = ReturnCode.SUCCESS.getCode();
 
     @JsonProperty("message")
     @ApiModelProperty(value = "返回消息", example = "成功", required = true)

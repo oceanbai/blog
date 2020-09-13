@@ -18,10 +18,12 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @TableName("blog_classification")
-@ApiModel(value="Classification对象", description="分类表")
 public class Classification extends BaseEntry {
 
     private static final long serialVersionUID = 1L;
+
+    @ApiModelProperty(value = "分类节点标志")
+    private String classificationCode;
 
     @ApiModelProperty(value = "分类名称")
     private String classificationName;
@@ -30,7 +32,7 @@ public class Classification extends BaseEntry {
     private String classificationAlias;
 
     @ApiModelProperty(value = "父分类ID")
-    private Long parentId;
+    private String parentId;
 
     @ApiModelProperty(value = "排序序号")
     private Integer sortNumber;
