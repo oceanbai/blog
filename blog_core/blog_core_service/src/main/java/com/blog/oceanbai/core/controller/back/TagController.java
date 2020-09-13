@@ -48,8 +48,9 @@ public class TagController {
 
     @ApiOperation("修改标签")
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public BlogApiResponse<Void> updateTag(TagDTO tagDTO) {
-        return new BlogApiResponse<>();
+    public BlogApiResponse<TagDTO> updateTag(@RequestBody TagDTO tagDTO) {
+        BlogApiResponse<TagDTO> blogApiResponse = BlogApiResponse.ok(iTagService.updateTag(tagDTO));
+        return blogApiResponse;
     }
 
     @ApiOperation("获取标签列表")

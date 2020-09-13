@@ -22,6 +22,9 @@ public class TagDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @ApiModelProperty(value = "标签ID")
+    private String id;
+
     @ApiModelProperty(value = "标签名")
     private String tagName;
 

@@ -52,7 +52,11 @@ public class TagServiceImpl extends ServiceImpl<TagMapper, Tag> implements ITagS
 
     @Override
     public TagDTO updateTag(TagDTO tagDTO) {
-        return null;
+        Tag tag = new Tag();
+         BeanUtils.copyProperties(tagDTO,tag);
+        tag.setId(Long.parseLong(tagDTO.getId()));
+        baseMapper.updateById(tag);
+        return tagDTO;
     }
 
     @Override

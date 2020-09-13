@@ -17,27 +17,27 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
-@TableName("blog_sort")
-@ApiModel(value="Sort对象", description="分类表")
-public class Sort extends BaseEntry {
+@TableName("blog_classification")
+@ApiModel(value="Classification对象", description="分类表")
+public class Classification extends BaseEntry {
 
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "分类名称")
-    private String sortName;
+    private String classificationName;
 
     @ApiModelProperty(value = "分类别名")
-    private String sortAlias;
+    private String classificationAlias;
 
     @ApiModelProperty(value = "父分类ID")
-    private Long parentSortId;
+    private Long parentId;
 
     @ApiModelProperty(value = "排序序号")
     private Integer sortNumber;
 
-    public Sort(){
+    public Classification(){
     }
-    public Sort(long id){
+    public Classification(long id){
         super(id);
     }
 }

@@ -3,9 +3,9 @@ package com.blog.oceanbai.core.controller.back;
 
 import com.blog.oceanbai.common.model.response.BlogApiResponse;
 import com.blog.oceanbai.core.api.dto.ArticleDTO;
-import com.blog.oceanbai.core.api.dto.SortDTO;
+import com.blog.oceanbai.core.api.dto.ClassificationDTO;
 import com.blog.oceanbai.core.api.vo.SortVO;
-import com.blog.oceanbai.core.service.ISortService;
+import com.blog.oceanbai.core.service.IClassificationService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,28 +25,29 @@ import java.util.List;
  * @since 2020-08-31
  */
 @RestController
-@RequestMapping("/blog/sort")
-public class SortController {
+@RequestMapping("/blog/classification")
+public class ClassificationController {
 
     @Resource
-    private ISortService iSortService;
+    private IClassificationService iClassificationService;
     @ApiOperation("增加分类")
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public BlogApiResponse<SortDTO> addSort(@RequestBody SortDTO sortDTO) {
-        BlogApiResponse<SortDTO> blogApiResponse = BlogApiResponse.ok(iSortService.addSort(sortDTO));
+    public BlogApiResponse<ClassificationDTO> addSort(@RequestBody ClassificationDTO classificationDTO) {
+        BlogApiResponse<ClassificationDTO> blogApiResponse = BlogApiResponse.ok(iClassificationService.addClassification(classificationDTO));
         return blogApiResponse;
     }
 
     @ApiOperation("删除分类")
-    @RequestMapping(value = "/delete", method = RequestMethod.POST)
+    @RequestMapping(value = "/delete", method = RequestMethod.GET)
     public BlogApiResponse<Void> deleteSort(String articleId) {
         return new BlogApiResponse<>();
     }
 
     @ApiOperation("修改分类")
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public BlogApiResponse<Void> updateSort(ArticleDTO articleDTO) {
-        return new BlogApiResponse<>();
+    public BlogApiResponse<ClassificationDTO> updateSort(@RequestBody ClassificationDTO classificationDTO) {
+        BlogApiResponse<ClassificationDTO> blogApiResponse = BlogApiResponse.ok(iClassificationService.updateClassification(classificationDTO));
+        return blogApiResponse;
     }
 
     @ApiOperation("获取分类列表")

@@ -1,6 +1,6 @@
 package com.blog.oceanbai.core.dao.mapper;
 
-import com.blog.oceanbai.core.dao.entity.Sort;
+import com.blog.oceanbai.core.dao.entity.Classification;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author ocean.bai
  * @since 2020-08-31
  */
-public interface SortMapper extends BaseMapper<Sort> {
+public interface SortMapper extends BaseMapper<Classification> {
 
 }

@@ -1,5 +1,6 @@
 package com.blog.oceanbai.core.dao;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.blog.oceanbai.common.constant.CommonConstant;
 import lombok.Data;
 
@@ -13,7 +14,7 @@ import java.time.LocalDateTime;
  */
 @Data
 public class BaseEntry {
-    @Id
+    @TableId
     @Column(name = "id")
     private Long id;
 

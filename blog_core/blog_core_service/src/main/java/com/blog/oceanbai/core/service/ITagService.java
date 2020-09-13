@@ -18,7 +18,7 @@ import java.util.List;
  * @author ocean.bai
  * @since 2020-08-31
  */
-public interface ITagService extends IService<Tag> {
+public interface ITagService {
 
     TagDTO addTag(TagDTO tagDTO);
 
