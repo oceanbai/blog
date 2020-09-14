@@ -36,6 +36,7 @@ public class TagServiceImpl extends ServiceImpl<TagMapper, Tag> implements ITagS
     public TagDTO addTag(TagDTO tagDTO) {
         Tag tag = new Tag(snowFlakeIdUtil.nextId());
         BeanUtils.copyProperties(tagDTO,tag);
+        tag.setLinkArticleCount(0);
         baseMapper.insert(tag);
         return tagDTO;
     }
