@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blog.oceanbai.core.dao.mapper.ClassificationMapper">
+
+    <resultMap id="dtoResultMap" type="com.blog.oceanbai.core.api.dto.ClassificationDTO">
+        <!-- 定义主键 ,非常重要。如果是多个字段,则定义多个id -->
+        <result property="id" column="id"/>
+        <!-- 定义普通属性 -->
+        <result property="classificationCode" column="classification_code"/>
+        <result property="classificationName" column="classification_name"/>
+        <result property="classificationAlias" column="classification_alias"/>
+        <result property="parentId" column="parent_id"/>
+        <result property="sortNumber" column="sort_number"/>
+    </resultMap>
+
+    <select id="getAllByParentId" resultMap="dtoResultMap">
+        SELECT t.id,
+               t.parent_id,
+               t.classification_alias,
+               t.classification_code,
+               t.classification_name,
+               t.sort_number
+        FROM blog_classification t
+        WHERE t.is_deleted = '0'
+        order by t.sort_number
+    </select>
+</mapper>

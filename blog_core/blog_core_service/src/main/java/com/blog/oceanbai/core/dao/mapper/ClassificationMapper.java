@@ -1,7 +1,10 @@
 package com.blog.oceanbai.core.dao.mapper;
 
+import com.blog.oceanbai.core.api.dto.ClassificationDTO;
 import com.blog.oceanbai.core.dao.entity.Classification;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+
+import java.util.List;
 
 /**
  * <p>
@@ -11,6 +14,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author ocean.bai
  * @since 2020-08-31
  */
-public interface SortMapper extends BaseMapper<Classification> {
+public interface ClassificationMapper extends BaseMapper<Classification> {
 
+    List<ClassificationDTO> getAllByParentId();
 }
